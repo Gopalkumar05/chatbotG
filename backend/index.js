@@ -6,9 +6,9 @@ require("dotenv").config(); // Load environment variables
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-app.use(cors(),{
+app.use(cors({
     origin:"https://chatbotg.onrender.com",
-});
+}));
 app.use(express.json());
 
 app.post("/chat", async (req, res) => {
