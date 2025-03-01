@@ -20,7 +20,7 @@ const Chatbot = () => {
     setInput("");
 
     try {
-      const response = await axios.post("http://localhost:4000/chat", { message: input });
+      const response = await axios.post("https://chatbotg.onrender.com/chat", { message: input });
       setMessages([...newMessages, { id: Date.now(), sender: "bot", text: response.data.reply }]);
     } catch (error) {
       setMessages([...newMessages, { id: Date.now(), sender: "bot", text: "Error: Unable to fetch response" }]);
