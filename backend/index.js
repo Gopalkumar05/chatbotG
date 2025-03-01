@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(cors({
-    origin:"https://chatbotg.onrender.com",
+     origin: 'https://chatbotg-1.onrender.com',
 }));
 app.use(express.json());
 
